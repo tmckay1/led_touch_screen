@@ -1,5 +1,5 @@
 from cursors.TouchCursor import TouchCursor
-from configs.ScreenConfig import ScreenConfig
+from configs.TouchCursorConfig import TouchCursorConfig
 from animations.PersistTouchAnimation import PersistTouchAnimation
 
 from bibliopixel.layout import Matrix
