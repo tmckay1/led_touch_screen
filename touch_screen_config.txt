@@ -1,0 +1,29 @@
+{
+  ('EV_SYN', 0): [('SYN_REPORT', 0), ('SYN_CONFIG', 1), ('SYN_DROPPED', 3)],
+  ('EV_KEY', 1): [('BTN_TOUCH', 330)],
+  ('EV_ABS', 3): [
+  (('ABS_X', 0), AbsInfo(value=24602, min=0, max=32767, fuzz=0, flat=0, resolution=0)),
+  (('ABS_Y', 1), AbsInfo(value=19713, min=0, max=32767, fuzz=0, flat=0, resolution=0)),
+  (('ABS_MT_SLOT', 47), AbsInfo(value=1, min=0, max=45, fuzz=0, flat=0, resolution=0)),
+  (('ABS_MT_TOUCH_MAJOR', 48), AbsInfo(value=0, min=0, max=32767, fuzz=0, flat=0, resolution=0)),
+  (('ABS_MT_TOUCH_MINOR', 49), AbsInfo(value=0, min=0, max=32767, fuzz=0, flat=0, resolution=0)),
+  (('ABS_MT_ORIENTATION', 52), AbsInfo(value=0, min=0, max=1, fuzz=0, flat=0, resolution=0)),
+  (('ABS_MT_POSITION_X', 53), AbsInfo(value=0, min=0, max=32767, fuzz=0, flat=0, resolution=0)),
+  (('ABS_MT_POSITION_Y', 54), AbsInfo(value=0, min=0, max=32767, fuzz=0, flat=0, resolution=0)),
+  (('ABS_MT_TRACKING_ID', 57), AbsInfo(value=0, min=0, max=65535, fuzz=0, flat=0, resolution=0))]
+}
+{
+  0: [0, 1, 3],
+  1: [330],
+  3: [
+    (0, AbsInfo(value=24602, min=0, max=32767, fuzz=0, flat=0, resolution=0)),
+    (1, AbsInfo(value=19713, min=0, max=32767, fuzz=0, flat=0, resolution=0)),
+    (47, AbsInfo(value=1, min=0, max=45, fuzz=0, flat=0, resolution=0)),
+    (48, AbsInfo(value=0, min=0, max=32767, fuzz=0, flat=0, resolution=0)),
+    (49, AbsInfo(value=0, min=0, max=32767, fuzz=0, flat=0, resolution=0)),
+    (52, AbsInfo(value=0, min=0, max=1, fuzz=0, flat=0, resolution=0)),
+    (53, AbsInfo(value=0, min=0, max=32767, fuzz=0, flat=0, resolution=0)),
+    (54, AbsInfo(value=0, min=0, max=32767, fuzz=0, flat=0, resolution=0)),
+    (57, AbsInfo(value=0, min=0, max=65535, fuzz=0, flat=0, resolution=0))
+  ]
+}

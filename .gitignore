@@ -1,0 +1,3 @@
+# don't track virtual env or cache
+env/
+__pycache__/
