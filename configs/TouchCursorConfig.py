@@ -24,14 +24,14 @@ class TouchCursorConfig(CursorConfig):
     # if we find our raw x in the range, set the index
     x_ranges = self._config["x"]
     for index, x_range in enumerate(x_ranges):
-      if raw_x >= x_range[0] && raw_x < x_range[1]:
+      if raw_x >= x_range[0] and raw_x < x_range[1]:
         x = index
         break
 
     # if we find our raw y in the range, set the index
     y_ranges = self._config["y"]
     for index, y_range in enumerate(y_ranges):
-      if raw_y >= y_range[0] && raw_y < y_range[1]:
+      if raw_y >= y_range[0] and raw_y < y_range[1]:
         y = index
         break
 
