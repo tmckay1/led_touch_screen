@@ -7,8 +7,8 @@ from bibliopixel.layout.geometry import Rotation
 from bibliopixel.drivers.PiWS281X import *
 
 # create biblio pixel driver and led
-vert_flip  = False   # flip across x-axis
-y_flip     = True   # flip across y-axis
+vert_flip  = True   # flip across x-axis
+y_flip     = False   # flip across y-axis
 serpentine = True    # serpentine pattern
 thread     = False   # display updates to run in background thread
 width      = 9       # width of board
