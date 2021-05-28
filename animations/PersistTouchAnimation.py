@@ -19,8 +19,6 @@ class PersistTouchAnimation(Animation):
     self._led_matrix.fillScreen()
     self._led_matrix.push_to_driver()
 
-    brightness = 255
-
     while True:
       raw_position = self._cursor.get_current_position()
       print("Retrieved raw_position: " + str(raw_position))
@@ -37,6 +35,5 @@ class PersistTouchAnimation(Animation):
       if x != -1 and y != -1 and pair_not_chosen:
         print("Setting color " + str(self._color) + " for position " + str((x, y)))
         self._points_drawn.append((x, y))
-        self._led_matrix.set(x, y, (brightness, 0, 0))
+        self._led_matrix.set(x, y, self._color)
         self._led_matrix.push_to_driver()
-        brightness = brightness - 10
