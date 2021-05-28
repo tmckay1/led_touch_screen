@@ -10,11 +10,12 @@ class PersistTouchAnimation(Animation):
     self._color = color
   
   def run(self):
-    print("Running PersistTouchAnimation")
+    print("Running PersistTouchAnimation with color: " + str(self._color))
     while True:
       raw_position = self._cursor.get_current_position()
       print("Retrieved raw_position: " + str(raw_position))
       (x, y) = self._cursor_config.get_x_y_position_from_raw_position(raw_position)
       print("x: " + str(x) + ", y: " + str(y))
       if x != -1 and y != -1:
+        print("Setting color " + str(self._color) + " for position " + str((x, y)))
         self._led_matrix.set(x, y, self._color)
