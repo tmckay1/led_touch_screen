@@ -24,8 +24,8 @@ cursor = TouchCursor(device_path)
 # create the cursor config that will be used to determine
 # the position of the leds in relation to the screen
 config = {
-  "x": [],
-  "y": []
+  "x": [(0,3600), (3600, 6900), (6900, 10300), (10300, 14250), (14250, 17750), (17750, 21250), (21250, 25000), (25000, 28500), (28500, 40000)],
+  "y": [(0, 5250), (5250, 11000), (11000, 18500), (18500, 24900), (24900, 40000)]
 }
 cursor_config = TouchCursorConfig(config) 
 

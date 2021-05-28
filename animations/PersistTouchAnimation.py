@@ -12,4 +12,5 @@ class PersistTouchAnimation(Animation):
   def run(self):
     raw_position = cursor.get_current_position()
     (x, y) = cursor_config.get_x_y_position_from_raw_position(raw_position)
-    self._led.set(x, y, self._color)
+    if x != -1 and y != -1:
+      self._led.set(x, y, self._color)
