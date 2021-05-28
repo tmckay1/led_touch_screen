@@ -26,9 +26,9 @@ class TouchCursor(Cursor):
     # from the device
     events = self._device.read()
     for event in events:
-      if event.code == X_POSITION_CODE:
+      if event.code == self.X_POSITION_CODE:
         x_pos = event.value
-      elif event.code == Y_POSITION_CODE:
+      elif event.code == self.Y_POSITION_CODE:
         y_pos = event.value
 
     return (x_pos, y_pos)
