@@ -45,7 +45,7 @@ class FadeTouchAnimation(Animation):
         time_last_touched = current_time_in_seconds - self._led_last_touched[x][y]
         brightness = 0
         if time_last_touched < self.FADE_TIME_TO_BLACK:
-          brightness = int((time_last_touched / self.FADE_TIME_TO_BLACK) * self.MAX_BRIGHTNESS)
+          brightness = int((1 - time_last_touched / self.FADE_TIME_TO_BLACK) * self.MAX_BRIGHTNESS)
         self._led_matrix.set(x, y, (0, brightness, 0))
 
   def reset_points_last_touched(self):
