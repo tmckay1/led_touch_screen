@@ -19,3 +19,4 @@ class PersistTouchAnimation(Animation):
       if x != -1 and y != -1:
         print("Setting color " + str(self._color) + " for position " + str((x, y)))
         self._led_matrix.set(x, y, self._color)
+        self._led_matrix.push_to_driver()
