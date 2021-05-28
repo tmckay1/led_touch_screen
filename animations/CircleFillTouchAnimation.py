@@ -45,7 +45,7 @@ class CircleFillTouchAnimation(Animation):
         print("Drawing rect for initial position " + str(initial_position) + " and current_position " + str(current_position))
         radius = self.calculate_radius(initial_position, current_position)
         self._led_matrix.fillScreen()
-        self._led_matrix.drawCircle(x, y, radius, self._color)
+        self._led_matrix.fillCircle(x, y, radius, self._color)
         self._led_matrix.push_to_driver()
 
   def has_point_changed(self, x, y, current_position):

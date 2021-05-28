@@ -38,37 +38,37 @@ config = {
 }
 cursor_config = TouchCursorConfig(config) 
 
-# color = (0, 255, 0)
-# anim = PersistTouchAnimation(led_matrix, cursor, cursor_config, color)
-# anim.run()
+#color = (0, 255, 0)
+#anim = PersistTouchAnimation(led_matrix, cursor, cursor_config, color)
+#anim.run()
 
-# fade_time_to_black = 1
-# anim = FadeTouchAnimation(led_matrix, cursor, cursor_config, fade_time_to_black)
-# anim.run()
+#fade_time_to_black = 1
+#anim = FadeTouchAnimation(led_matrix, cursor, cursor_config, fade_time_to_black)
+#anim.run()
 
-# color = (0, 255, 0)
-# anim = SingleTouchAnimation(led_matrix, cursor, cursor_config, color)
-# anim.run()
+#color = (0, 255, 0)
+#anim = SingleTouchAnimation(led_matrix, cursor, cursor_config, color)
+#anim.run()
 
-# color = (0, 255, 0)
-# reset_time = 3
-# anim = RectFillTouchAnimation(led_matrix, cursor, cursor_config, color, reset_time)
-# anim.run()
+#color = (0, 255, 0)
+#reset_time = 3
+#anim = RectFillTouchAnimation(led_matrix, cursor, cursor_config, color, reset_time)
+#anim.run()
 
-# color = (0, 255, 0)
-# reset_time = 3
-# anim = RectTouchAnimation(led_matrix, cursor, cursor_config, color, reset_time)
-# anim.run()
+#color = (0, 255, 0)
+#reset_time = 3
+#anim = RectTouchAnimation(led_matrix, cursor, cursor_config, color, reset_time)
+#anim.run()
 
-# color = (0, 255, 0)
-# reset_time = 3
-# anim = CircleFillTouchAnimation(led_matrix, cursor, cursor_config, color, reset_time)
-# anim.run()
+#color = (0, 255, 0)
+#reset_time = 3
+#anim = CircleFillTouchAnimation(led_matrix, cursor, cursor_config, color, reset_time)
+#anim.run()
 
-# color = (0, 255, 0)
-# reset_time = 3
-# anim = CircleTouchAnimation(led_matrix, cursor, cursor_config, color, reset_time)
-# anim.run()
+#color = (0, 255, 0)
+#reset_time = 3
+#anim = CircleTouchAnimation(led_matrix, cursor, cursor_config, color, reset_time)
+#anim.run()
 
 color = (0, 255, 0)
 reset_time = 3
