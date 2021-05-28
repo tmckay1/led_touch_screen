@@ -2,6 +2,7 @@ from cursors.TouchCursor import TouchCursor
 from configs.TouchCursorConfig import TouchCursorConfig
 from animations.PersistTouchAnimation import PersistTouchAnimation
 from animations.FadeTouchAnimation import FadeTouchAnimation
+from animations.SingleTouchAnimation import SingleTouchAnimation
 
 from bibliopixel.layout import Matrix
 from bibliopixel.layout.geometry import Rotation
@@ -35,6 +36,10 @@ cursor_config = TouchCursorConfig(config)
 # anim = PersistTouchAnimation(led_matrix, cursor, cursor_config, color)
 # anim.run()
 
-fade_time_to_black = 1
-anim = FadeTouchAnimation(led_matrix, cursor, cursor_config, fade_time_to_black)
+# fade_time_to_black = 1
+# anim = FadeTouchAnimation(led_matrix, cursor, cursor_config, fade_time_to_black)
+# anim.run()
+
+color = (0, 255, 0)
+anim = SingleTouchAnimation(led_matrix, cursor, cursor_config, color)
 anim.run()
