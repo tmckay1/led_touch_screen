@@ -16,6 +16,7 @@ class PersistTouchAnimation(Animation):
     print("Running PersistTouchAnimation with color: " + str(self._color))
     self._points_drawn = []
     self._led_matrix.fillScreen()
+    self._led_matrix.push_to_driver()
 
     while True:
       raw_position = self._cursor.get_current_position()
