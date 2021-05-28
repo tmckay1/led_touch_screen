@@ -40,6 +40,11 @@ cursor_config = TouchCursorConfig(config)
 # anim = FadeTouchAnimation(led_matrix, cursor, cursor_config, fade_time_to_black)
 # anim.run()
 
+# color = (0, 255, 0)
+# anim = SingleTouchAnimation(led_matrix, cursor, cursor_config, color)
+# anim.run()
+
 color = (0, 255, 0)
-anim = SingleTouchAnimation(led_matrix, cursor, cursor_config, color)
+reset_time = 3
+anim = RectFillTouchAnimation(led_matrix, cursor, cursor_config, color, reset_time)
 anim.run()
