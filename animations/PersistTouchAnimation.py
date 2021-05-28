@@ -30,7 +30,7 @@ class PersistTouchAnimation(Animation):
           pair_not_chosen = False
 
       # draw led if valid point and the point was not yet chosen
-      if x != -1 and y != -1 && pair_not_chosen:
+      if x != -1 and y != -1 and pair_not_chosen:
         print("Setting color " + str(self._color) + " for position " + str((x, y)))
         self._points_drawn.append((x, y))
         self._led_matrix.set(x, y, self._color)
