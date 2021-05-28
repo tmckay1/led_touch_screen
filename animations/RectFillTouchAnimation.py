@@ -23,9 +23,9 @@ class RectFillTouchAnimation(Animation):
     initial_time = 0
     initial_position = (-2, -2)
     current_position = (-1, -1)
-    current_time_in_seconds = time.time()
 
     while True:
+      current_time_in_seconds = time.time()
       raw_position = self._cursor.get_current_position()
       print("Retrieved raw_position: " + str(raw_position))
       (x, y) = self._cursor_config.get_x_y_position_from_raw_position(raw_position)
