@@ -1,6 +1,7 @@
 from .Cursor import Cursor
 from evdev import InputDevice, ecodes
 from select import select
+import asyncio
 
 class TouchCursor(Cursor):
 
@@ -32,3 +33,18 @@ class TouchCursor(Cursor):
         y_pos = event.value
 
     return (x_pos, y_pos)
+
+  @asyncio.coroutine
+  def get_current_position_async(self, position_array):
+    x_pos = -1
+    y_pos = -1
+
+    while True:
+      events = yield from device.async_read()
+        for event in events:
+          if event.code == self.X_POSITION_CODE:
+            x_pos = event.value
+          elif event.code == self.Y_POSITION_CODE:
+            y_pos = event.value
+
+    position_array.append((x_pos, y_pos))

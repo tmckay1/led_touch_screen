@@ -1,7 +1,8 @@
 from .Animation import Animation
+import asyncio
 
-# Animation to keep the drawn values on screen and to not clear them
-class PersistTouchAnimation(Animation):
+# Animation to fade the leds out over time once drawn on screen
+class FadeTouchAnimation(Animation):
 
   # color used to show on each led
   _color = (0, 0, 0)
