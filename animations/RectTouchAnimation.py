@@ -1,8 +1,8 @@
 from .Animation import Animation
 import time
 
-# Animation to draw a filled rect to the screen
-class RectFillTouchAnimation(Animation):
+# Animation to draw a rect to the screen
+class RectTouchAnimation(Animation):
 
   # time in seconds to reset the animation if an event doesn't occur in this time
   _reset_time = 3
@@ -16,7 +16,7 @@ class RectFillTouchAnimation(Animation):
     self._reset_time = reset_time
   
   def run(self):
-    print("Running RectFillTouchAnimation with color: " + str(self._color))
+    print("Running RectTouchAnimation with color: " + str(self._color))
     self._points_drawn = []
     self._led_matrix.fillScreen()
     self._led_matrix.push_to_driver()
@@ -46,7 +46,7 @@ class RectFillTouchAnimation(Animation):
         rect_width = 1 + abs(current_position[0] - initial_position[0])
         rect_height = 1 + abs(current_position[1] - initial_position[1])
         self._led_matrix.fillScreen()
-        self._led_matrix.fillRect(top_x, top_y, rect_width, rect_height, self._color)
+        self._led_matrix.drawRect(top_x, top_y, rect_width, rect_height, self._color)
         self._led_matrix.push_to_driver()
 
   def has_point_changed(self, x, y, current_position):
