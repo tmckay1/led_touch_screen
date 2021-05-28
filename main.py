@@ -6,7 +6,9 @@ from animations.FadeTouchAnimation import FadeTouchAnimation
 from animations.SingleTouchAnimation import SingleTouchAnimation
 from animations.RectFillTouchAnimation import RectFillTouchAnimation
 from animations.RectTouchAnimation import RectTouchAnimation
+from animations.CircleFillTouchAnimation import CircleFillTouchAnimation
 from animations.CircleTouchAnimation import CircleTouchAnimation
+from animations.LineTouchAnimation import LineTouchAnimation
 
 from bibliopixel.layout import Matrix
 from bibliopixel.layout.geometry import Rotation
@@ -58,7 +60,17 @@ cursor_config = TouchCursorConfig(config)
 # anim = RectTouchAnimation(led_matrix, cursor, cursor_config, color, reset_time)
 # anim.run()
 
+# color = (0, 255, 0)
+# reset_time = 3
+# anim = CircleFillTouchAnimation(led_matrix, cursor, cursor_config, color, reset_time)
+# anim.run()
+
+# color = (0, 255, 0)
+# reset_time = 3
+# anim = CircleTouchAnimation(led_matrix, cursor, cursor_config, color, reset_time)
+# anim.run()
+
 color = (0, 255, 0)
 reset_time = 3
-anim = CircleTouchAnimation(led_matrix, cursor, cursor_config, color, reset_time)
+anim = LineTouchAnimation(led_matrix, cursor, cursor_config, color, reset_time)
 anim.run()
