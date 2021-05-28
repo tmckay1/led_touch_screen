@@ -50,7 +50,7 @@ class RectFillTouchAnimation(Animation):
         self._led_matrix.push_to_driver()
 
   def has_point_changed(self, x, y, current_position):
-    print("has_point_changed x: " + str(x) + ", y: " + str(y) + "current_position: " + current_position)
+    print("has_point_changed x: " + str(x) + ", y: " + str(y) + "current_position: " + str(current_position))
     return current_position[0] != x and current_position[1] != y
 
   def top_left_coordinates(self, initial_position, current_position):
