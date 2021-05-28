@@ -39,7 +39,7 @@ class TouchCursor(Cursor):
 
     print("current position")
     while True:
-      async for event in self._device.async_read_loop():
+      async for event in self._device.async_read():
         print("event")
         if event.code == self.X_POSITION_CODE:
           x_pos = event.value
