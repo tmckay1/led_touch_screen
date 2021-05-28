@@ -1,8 +1,10 @@
 from cursors.TouchCursor import TouchCursor
 from configs.TouchCursorConfig import TouchCursorConfig
+
 from animations.PersistTouchAnimation import PersistTouchAnimation
 from animations.FadeTouchAnimation import FadeTouchAnimation
 from animations.SingleTouchAnimation import SingleTouchAnimation
+from animations.RectFillTouchAnimation import RectFillTouchAnimation
 
 from bibliopixel.layout import Matrix
 from bibliopixel.layout.geometry import Rotation
