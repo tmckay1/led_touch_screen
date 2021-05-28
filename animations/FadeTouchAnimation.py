@@ -7,12 +7,16 @@ class FadeTouchAnimation(Animation):
   MAX_BRIGHTNESS = 255
 
   # time after which we want to fully fade an led to black after it has been touched
-  FADE_TIME_TO_BLACK = 3
+  _fade_time_to_black = 3
 
   # an array of arrays representing the led matrix where the index of the array represents the
   # index of the led. This array is filled with timestamps of the last time the user was hovering
   # over that led
   _led_last_touched = []
+
+  def __init__(self, led_matrix, cursor, cursor_config, fade_time_to_black):
+    super().__init__(led_matrix, cursor, cursor_config)
+    self._fade_time_to_black = fade_time_to_black
 
   def run(self):
     print("Running FadeTouchAnimation")
@@ -44,8 +48,8 @@ class FadeTouchAnimation(Animation):
       for y in range(len(self._led_last_touched[x])):
         time_last_touched = current_time_in_seconds - self._led_last_touched[x][y]
         brightness = 0
-        if time_last_touched < self.FADE_TIME_TO_BLACK:
-          brightness = int((1 - time_last_touched / self.FADE_TIME_TO_BLACK) * self.MAX_BRIGHTNESS)
+        if time_last_touched < self._fade_time_to_black:
+          brightness = int((1 - time_last_touched / self._fade_time_to_black) * self.MAX_BRIGHTNESS)
         self._led_matrix.set(x, y, (0, brightness, 0))
 
   def reset_points_last_touched(self):

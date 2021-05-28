@@ -35,5 +35,6 @@ cursor_config = TouchCursorConfig(config)
 # anim = PersistTouchAnimation(led_matrix, cursor, cursor_config, color)
 # anim.run()
 
-anim = FadeTouchAnimation(led_matrix, cursor, cursor_config)
+fade_time_to_black = 1
+anim = FadeTouchAnimation(led_matrix, cursor, cursor_config, fade_time_to_black)
 anim.run()
