@@ -15,7 +15,7 @@ class FadeTouchAnimation(Animation):
   _led_last_touched = []
 
   def run(self):
-    print("Running FadeTouchAnimation with color: " + str(self._color))
+    print("Running FadeTouchAnimation")
     self._led_matrix.fillScreen()
     self._led_matrix.push_to_driver()
     self.reset_points_last_touched()
