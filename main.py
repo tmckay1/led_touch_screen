@@ -8,14 +8,15 @@ from bibliopixel.drivers.PiWS281X import *
 
 # create biblio pixel driver and led
 vert_flip  = False   # flip across x-axis
-y_flip     = False   # flip across y-axis
+y_flip     = True   # flip across y-axis
 serpentine = True    # serpentine pattern
 thread     = False   # display updates to run in background thread
 width      = 9       # width of board
 height     = 5       # height of board
 brightness = 100     # brightness 0-255
+rotation   = Rotation.ROTATE_0
 driver     = PiWS281X(height*width)
-led_matrix = Matrix(driver, width, height, Rotation.ROTATE_0, vert_flip, y_flip, serpentine, thread, brightness)
+led_matrix = Matrix(driver, width, height, rotation, vert_flip, y_flip, serpentine, thread, brightness)
 
 # create cursor object to get position of finger/mouse
 device_path = "/dev/input/event0"
