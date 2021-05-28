@@ -28,21 +28,25 @@ class FadeTouchAnimation(Animation):
 
       current_time_in_seconds = time.time()
 
-      # reset timestamp of led if valid point
-      if x != -1 and y != -1:
-        print("Setting time " + str(current_time_in_seconds) + " for position " + str((x, y)))
-        self._led_last_touched[x][y] = current_time_in_seconds
-
-      # loop through the timestamps last touched for the matrix and set the brightness appropriately
-      for x in range(len(self._led_last_touched)):
-        for y in range(len(self._led_last_touched[x])):
-          time_last_touched = current_time_in_seconds - self._led_last_touched[x][y]
-          brightness = 0
-          if time_last_touched < FADE_TIME_TO_BLACK:
-            brightness = int((time_last_touched / FADE_TIME_TO_BLACK) * MAX_BRIGHTNESS)
-          self._led_matrix.set(x, y, (0, brightness, 0))
-
+      self.set_last_touched(x, y, current_time_in_seconds)
+      self.set_faded_matrix(current_time_in_seconds)
       self._led_matrix.push_to_driver()
+
+  # reset timestamp of led if valid point
+  def set_last_touched(self, x, y, current_time_in_seconds):
+    if x != -1 and y != -1:
+      print("Setting time " + str(current_time_in_seconds) + " for position " + str((x, y)))
+      self._led_last_touched[x][y] = current_time_in_seconds
+
+  # loop through the timestamps last touched for the matrix and set the brightness appropriately
+  def set_faded_matrix(self, current_time_in_seconds):
+    for x in range(len(self._led_last_touched)):
+      for y in range(len(self._led_last_touched[x])):
+        time_last_touched = current_time_in_seconds - self._led_last_touched[x][y]
+        brightness = 0
+        if time_last_touched < self.FADE_TIME_TO_BLACK:
+          brightness = int((time_last_touched / self.FADE_TIME_TO_BLACK) * self.MAX_BRIGHTNESS)
+        self._led_matrix.set(x, y, (0, brightness, 0))
 
   def reset_points_last_touched(self):
     self._led_last_touched = [[0 for x in range(self._led_matrix.width)] for y in range(self._led_matrix.height)]
