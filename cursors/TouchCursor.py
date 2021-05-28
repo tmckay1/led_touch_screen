@@ -38,7 +38,7 @@ class TouchCursor(Cursor):
     y_pos = -1
 
     while True:
-      async for event in device.async_read_loop():
+      async for event in self._device.async_read_loop():
         if event.code == self.X_POSITION_CODE:
           x_pos = event.value
         elif event.code == self.Y_POSITION_CODE:
