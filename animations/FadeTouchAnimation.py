@@ -15,7 +15,7 @@ class FadeTouchAnimation(Animation):
     self._color = color
   
   def run(self):
-    print("Running PersistTouchAnimation with color: " + str(self._color))
+    print("Running FadeTouchAnimation with color: " + str(self._color))
     self._points_drawn = []
     self._led_matrix.fillScreen()
     self._led_matrix.push_to_driver()
