@@ -4,8 +4,8 @@ from select import select
 
 class TouchCursor(Cursor):
 
-  X_POSITION_CODE = ecodes.ABS_X
-  Y_POSITION_CODE = ecodes.ABS_Y
+  X_POSITION_CODE = ecodes.ABS_MT_POSITION_X
+  Y_POSITION_CODE = ecodes.ABS_MT_POSITION_Y
 
   # the device that represents the cursor
   _device = None
