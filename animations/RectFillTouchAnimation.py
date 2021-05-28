@@ -45,7 +45,7 @@ class RectFillTouchAnimation(Animation):
         (top_x, top_y) = self.top_left_coordinates(initial_position, current_position)
         rect_width = 1 + abs(current_position[0] - initial_position[0])
         rect_height = 1 + abs(current_position[1] - initial_position[1])
-        self._led_matrix.fill_rect(top_x, top_y, rect_width, rect_height, self._color)
+        self._led_matrix.fillRect(top_x, top_y, rect_width, rect_height, self._color)
         self._led_matrix.push_to_driver()
 
   def has_point_changed(self, x, y, current_position):
