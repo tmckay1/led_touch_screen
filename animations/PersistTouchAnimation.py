@@ -6,7 +6,7 @@ class PersistTouchAnimation(Animation):
   _color = (0, 0, 0)
 
   def __init__(self, led_matrix, cursor, cursor_config, color):
-    super(object, self).__init__(led_matrix, cursor, cursor_config)
+    super().__init__(led_matrix, cursor, cursor_config)
     self._color = color
   
   def run(self):
