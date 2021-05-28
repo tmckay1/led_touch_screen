@@ -49,4 +49,4 @@ class FadeTouchAnimation(Animation):
         self._led_matrix.set(x, y, (0, brightness, 0))
 
   def reset_points_last_touched(self):
-    self._led_last_touched = [[0 for x in range(self._led_matrix.width)] for y in range(self._led_matrix.height)]
+    self._led_last_touched = [[0 for y in range(self._led_matrix.height)] for x in range(self._led_matrix.width)]
