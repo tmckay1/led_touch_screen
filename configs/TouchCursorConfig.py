@@ -18,8 +18,8 @@ class TouchCursorConfig(CursorConfig):
     (raw_x, raw_y) = raw_position
 
     # x y indexes of leds
-    x = 0
-    y = 0
+    x = -1
+    y = -1
 
     # if we find our raw x in the range, set the index
     x_ranges = self._config["x"]
