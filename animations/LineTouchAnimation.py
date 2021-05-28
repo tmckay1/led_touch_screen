@@ -2,7 +2,7 @@ from .Animation import Animation
 import time
 
 # Animation to draw a rect to the screen
-class RectTouchAnimation(Animation):
+class LineTouchAnimation(Animation):
 
   # time in seconds to reset the animation if an event doesn't occur in this time
   _reset_time = 3
@@ -16,7 +16,7 @@ class RectTouchAnimation(Animation):
     self._reset_time = reset_time
   
   def run(self):
-    print("Running RectTouchAnimation with color: " + str(self._color))
+    print("Running LineTouchAnimation with color: " + str(self._color))
     self._points_drawn = []
     self._led_matrix.fillScreen()
     self._led_matrix.push_to_driver()
