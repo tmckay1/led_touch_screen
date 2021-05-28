@@ -25,7 +25,6 @@ class RectFillTouchAnimation(Animation):
     current_position = (-1, -1)
 
     while True:
-      current_time_in_seconds = time.time()
       raw_position = self._cursor.get_current_position()
       print("Retrieved raw_position: " + str(raw_position))
       (x, y) = self._cursor_config.get_x_y_position_from_raw_position(raw_position)
@@ -33,6 +32,7 @@ class RectFillTouchAnimation(Animation):
 
       # draw led if valid point and the point was not yet chosen
       if x != -1 and y != -1 and self.has_point_changed(x, y, current_position):
+        current_time_in_seconds = time.time()
         current_position = (x, y)
 
         # reset the positions for the square if enough time passes
