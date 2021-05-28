@@ -44,6 +44,7 @@ class CircleTouchAnimation(Animation):
 
         print("Drawing rect for initial position " + str(initial_position) + " and current_position " + str(current_position))
         radius = self.calculate_radius(initial_position, current_position)
+        radius = 0 if radius < 0
         self._led_matrix.fillScreen()
         self._led_matrix.drawCircle(x, y, radius, self._color)
         self._led_matrix.push_to_driver()
@@ -52,4 +53,4 @@ class CircleTouchAnimation(Animation):
     return current_position[0] != x or current_position[1] != y
 
   def calculate_radius(self, initial_position, current_position):
-    return int(math.sqrt((initial_position[0] - current_position[0])**2 + (initial_position[1] - current_position[1])**2))
+    return int(math.sqrt((initial_position[0] - current_position[0])**2 + (initial_position[1] - current_position[1])**2)) - 1
