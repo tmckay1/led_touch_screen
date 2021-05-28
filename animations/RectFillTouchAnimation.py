@@ -32,7 +32,7 @@ class RectFillTouchAnimation(Animation):
       print("x: " + str(x) + ", y: " + str(y))
 
       # draw led if valid point and the point was not yet chosen
-      if x != -1 and y != -1 and has_point_changed(x, y, current_position):
+      if x != -1 and y != -1 and self.has_point_changed(x, y, current_position):
         current_position = (x, y)
 
         # reset the positions for the square if enough time passes
