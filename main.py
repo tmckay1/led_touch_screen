@@ -18,7 +18,7 @@ driver     = PiWS281X(height*width)
 led_matrix = Matrix(driver, width, height, Rotation.ROTATE_0, vert_flip, y_flip, serpentine, thread, brightness)
 
 # create cursor object to get position of finger/mouse
-device_path = "/dev/input/event1"
+device_path = "/dev/input/event0"
 cursor = TouchCursor(device_path)
 
 # create the cursor config that will be used to determine

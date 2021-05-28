@@ -1,7 +1,7 @@
 from cursors.TouchCursor import TouchCursor
 import time
 
-device_path = "/dev/input/event1"
+device_path = "/dev/input/event0"
 cursor = TouchCursor(device_path)
 
 # script that will print out the x, y values of the current touch screen while a finger is on it
